@@ -1,0 +1,32 @@
+h1 {
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    
+}
+img{
+    height: 50px;
+}
+body {
+    background-color: rgb(17, 169, 91);
+   }
+.pagina-principal{ /*O ponto define a classe*/
+    height:200px !important; /* Quando se deseja prevalência&*/
+}
+#imagem-jogo{  /* usar o id*/
+    width: 33%;
+    height: 33%;
+}
+div{
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+table{
+    border: 1px #00fff0 solid;
+}
+
+td{
+    border: 1px #00fff0 solid; 
+}
+
