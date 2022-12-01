@@ -7,55 +7,75 @@
     <title>Nossas Promoções</title>
     <link href="css/estilos.css" rel="stylesheet"/>
     <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+-->
+    <link href = "css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
 
-    <a href="quem _somos.html"> Quem Somos </a>   
+    <nav class="navbar navbar-expand-md navbar-light  bg-inverse"> 
+        <div class="container-fluid"> 
+            <a class="navbar-brand" href="index.html">  <img src="imagens/INFOCENA.png"/> <!--InfoCena-->  </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"> 
+                <span class="navbar-toggler-icon"></span> 
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse"> <!-- caso o botão não for clicado, o menu irá ficar escondido -->
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">    <!-- retira os marcadores -->
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="quem _somos.html">Quem somos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aluguel.html">Alugue sua Loja</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lojas.html">Lojas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastre-se</a></li>       
+                    <li class="nav-item"><a class="nav-link" href="promocao.html">Promoções</a></li>
+                    <!--
+                        <a href="quem _somos.html"> Quem Somos </a>  
+                        <a href="aluguel.html"> Alugue sua Loja </a>
+                        <a href="lojas.html"> Lojas </a>
+                        <a href="produtos.html"> Produtos </a>
+                        <a href="cadastro.html"> Cadastre-se </a>    
+                        <a href="promocao.html"> Promoções</a>
+                    -->
+                </ul> 
+            </div>
+        </div>
+    </nav>
+    <main class="container"> 
 
-    <a href="aluguel.html"> Alugue sua Loja </a>
+        <h2>As nossas promoções</h2>
 
-    <a href="lojas.html"> Lojas </a>
+        <table class="table table-striped">
+            
+            <thead class="table-primary"> <!-- Cabeçalho da tabela-->
+                <tr>
+                    <th> Produto</th>
+                    <th> Preço</th>
+                    <th> Loja</th>
+                </tr> 
+            </thead>
 
-    <a href="produtos.html"> Produtos </a>
+            <tbody> <!-- Corpo da tabela-->
 
-    <a href="cadastro.html"> Cadastre-se </a>
+                <tr>
+                    <td> fifa 18</td>
+                    <td> R$ 5,00</td>
+                    <td> Game House</td>
+                </tr>
+                <tr>
+                    <td> Notebook Dell</td>
+                    <td> R$ 1.000,00</td>
+                    <td> Info Computer</td>
+                </tr>
+                <tr>
+                    <td> Iphone</td>
+                    <td> R$ 2.000,00</td>
+                    <td> Loja do Juca</td>
+                </tr>
+            </tbody>
+        </table>
 
-    <a href="promocao.html"> Promoção </a>
-
-    <h2>As nossas promoções</h2>
-
-    <table class="table table-striped">
-           
-        <thead class="table-primary"> <!-- Cabeçalho da tabela-->
-            <tr>
-                <th> Produto</th>
-                <th> Preço</th>
-                <th> Loja</th>
-            </tr> 
-        </thead>
-
-        <tbody> <!-- Corpo da tabela-->
-
-            <tr>
-                <td> fifa 18</td>
-                <td> R$ 5,00</td>
-                <td> Game House</td>
-            </tr>
-            <tr>
-                <td> Notebook Dell</td>
-                <td> R$ 1.000,00</td>
-                <td> Info Computer</td>
-            </tr>
-            <tr>
-                <td> Iphone</td>
-                <td> R$ 2.000,00</td>
-                <td> Loja do Juca</td>
-            </tr>
-        </tbody>
-    </table>
-
-
+    </main>
     
 </body>
+<script src="js/bootstrap.bundle.min.js"> </script>
 </html>

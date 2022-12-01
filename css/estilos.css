@@ -1,25 +1,32 @@
-h1 {
+/* A tag */
+h1{
     text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 50px;
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+}
+
+body{
+
+    background-color: rgb(17, 169, 91) /*!important; */
+    /*background-color: #000000;*/
 }
 img{
-    height: 50px;
+/*    height: 50px;*/
+    width: 100px;
+
 }
-body {
-    background-color: rgb(17, 169, 91);
-   }
-.pagina-principal{ /*O ponto define a classe*/
-    height:200px !important; /* Quando se deseja prevalência&*/
-}
-#imagem-jogo{  /* usar o id*/
-    width: 33%;
-    height: 33%;
+
+
+textarea{
+    font-family: Arial, Helvetica, sans-serif;
 }
 div{
     margin-top: 20px;
     margin-left: 15px;
+}
+span{
+    margin-top: 30px;
+    text-align: center;
 }
 
 table{
@@ -27,6 +34,26 @@ table{
 }
 
 td{
-    border: 1px #00fff0 solid; 
+    border: 1px #00fff0 solid;
 }
+
+nav{
+    background-color: #1b6e1b;
+}
+
+/* Para classe utilizamos . */
+.pagina-principal{
+    width: 33% !important;
+}
+
+/* Para id utilizamos # */
+#imagem-jogo{
+    height: 300px;
+    width: 400px;
+}
+
+.btn-primary{
+    background-color: rgb(44, 83, 4) !important;
+}
+
 

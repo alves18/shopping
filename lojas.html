@@ -4,38 +4,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lojas</title>
-    <link href="css/estilos.css" rel="stylesheet"/>
-</head>
+    <title>Document</title>
+    <link href="css/estilos.css" rel="stylesheet" />
+    <link href = "css/bootstrap.css" rel="stylesheet">
+    </head>
 <body>
-    <a href="quem _somos.html"> Quem Somos </a>   
-
-    <a href="aluguel.html"> Alugue sua Loja </a>
-
-    <a href="lojas.html"> Lojas </a>
-
-    <a href="produtos.html"> Produtos </a>
-
-    <a href="cadastro.html"> Cadastre-se </a>
-
-    <a href="promocao.html"> Promoção </a>
-
-    <h1>LOJAS</h1>
+    <nav class="navbar navbar-expand-md navbar-light  bg-inverse"> 
+        <div class="container-fluid"> 
+            <a class="navbar-brand" href="index.html">  <img src="imagens/INFOCENA.png"/> <!--InfoCena-->  </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"> 
+                <span class="navbar-toggler-icon"></span> 
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse"> <!-- caso o botão não for clicado, o menu irá ficar escondido -->
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">    <!-- retira os marcadores -->
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="quem _somos.html">Quem somos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aluguel.html">Alugue sua Loja</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lojas.html">Lojas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastre-se</a></li>       
+                    <li class="nav-item"><a class="nav-link" href="promocao.html">Promoções</a></li>
+                    <!--
+                        <a href="quem _somos.html"> Quem Somos </a>  
+                        <a href="aluguel.html"> Alugue sua Loja </a>
+                        <a href="lojas.html"> Lojas </a>
+                        <a href="produtos.html"> Produtos </a>
+                        <a href="cadastro.html"> Cadastre-se </a>    
+                        <a href="promocao.html"> Promoções</a>
+                    -->
+                </ul> 
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        <div>
+            <div class="row">
+                <div class="col-md text-center">
+                    <img src="imagens/sem-foto.jpg" class="pagina-principal"/>
+                    <p>Casa do Hardware</p>
+                </div>
+                <div class="col-md text-center">
+                    <img src="imagens/sem-foto.jpg" class="pagina-principal"/>
+                    <p>Info Computer</p>
+                </div>
+                <p></p>
+                <p></p>
+                
+            </div>
     
-<p> <img src="imagens/sem_imagem.jpg"/>
-    Casa do Hardware
-</p>
-<p> <img src="imagens/sem_imagem.jpg"/>
-    Info Computer
-</p>
-<p> <img src="imagens/sem_imagem.jpg"/>
-    Loja do Juca
-</p>
-<p> <img src="imagens/sem_imagem.jpg"/>
-    Recarga Aqui
-</p>
-<p> <img src="imagens/sem_imagem.jpg"/>
-    Game House
-<p>
+            <div class="row">
+                <div class="col-md text-center">
+                    <img src="imagens/sem-foto.jpg" class="pagina-principal"/>
+                    <p>Loja do Juca</p>
+                </div>
+                <div class="col-md text-center">
+                    <img src="imagens/sem-foto.jpg" class="pagina-principal"/>
+                    <p>Recarga Aqui</p>
+                </div>
+                <p></p>
+                <p></p>
+                
+            </div>
+
+            <div class="row">
+                <div class="col-md text-center">
+                    <img src="imagens/sem-foto.jpg" class="pagina-principal"/>
+                    <p>Game House</p>
+                </div>
+                <div class="col-md text-center">
+                    <img src="" class="pagina-principal"/>
+                    <p>.</p>
+                </div>
+                <p></p>
+                <p></p>
+            
+            </div>
+
+        </div>
+    </main> 
+
 </body>
+<script src="js/bootstrap.bundle.min.js"> </script>
 </html>

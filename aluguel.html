@@ -4,151 +4,116 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="css/estilos.css" rel="stylesheet"/>
+    <link href="css/estilos.css" rel="stylesheet" />
+    <link href = "css/bootstrap.css" rel="stylesheet">
+    <title>Aluguel</title>
 </head>
 <body>
-    <a href="quem _somos.html"> Quem Somos </a>   
-
-    <a href="aluguel.html"> Alugue sua Loja </a>
-
-    <a href="lojas.html"> Lojas </a>
-
-    <a href="produtos.html"> Produtos </a>
-
-    <a href="cadastro.html"> Cadastre-se </a>
-
-    <a href="promocao.html"> Promoção </a>
-
-    <h1>Alugue sua loja </h1>
-
-    
-</body>
-<script>
-
-var funcionarios = [];
-        function cadastrar(){
-            var nome = document.getElementById("nome").value;
-            var matricula = Number(document.getElementById("matricula").value);
-            var salario = Number(document.getElementById("salario").value);
-            var nascimento = document.getElementById("datanasc")
-            var pessoa = {}; //Abre e fecha Chaves{} indica que temos um JSON
-            pessoa["nome"] = nome;
-            pessoa["matricula"] = matricula;
-            pessoa["salario"] = salario;
-            pessoa["dataNascimento"] = nascimento;
-                   
-           
-            alert(pessoa.nome +   //Não é possível dar alert em um objeto JSON
-                "\n" + pessoa.matricula +
-                "\n" + pessoa.salario);
-            
-            funcionarios.push(pessoa);
-            document.getElementById("nome").value = "";
-            document.getElementById("matricula").value = "";
-            document.getElementById("salario").value = "";
-            document.getElementById("datanasc").value = "";
-
-            inicio();
-       }
-
-       function retornaMenu(){
-        <a href="shopping.html">
-        </a>
-       }
-
-      /* function listar(){
-            var saida = "<tr>" //Cria a primeira linha da tabela
-                        + "<td>Nome</td>"
-                        + "<td>Email</td>"
-                        + "<td>telefone Fixo</td>"
-                        + "<td>Telefone Celular</td>"
-                        + "<td>Mensagem</td>"
-                        + "</td>"
-                        
-            for(var i=0; i< funcionarios.length; i++){ //Varre a tabela do início ao fim preci
-                                                       //de apenas um "for" 
-                saida += "<tr>";
-                saida += "<td>" + funcionarios[i].matricula + "</td>";
-                saida += "<td>" + funcionarios[i].nome + "</td>";
-                saida += "<td>" + funcionarios[i].salario.toFixed(2).replace(".", ",") + "</td>";
-                var data = funcionarios[i].dataNascimento.split("-");
-                var formatada = data[2] + "/" + data[1] + "/" + data[0];
-                saida += "<td>" + formatada + "</td>";
-                saida += "</tr>";
-            }        
-            document.getElementById("dados").innerHTML = saida; //Chama a tabela que foi definida
-                                                                //após o "form" 
-       }
-*/
-       function inicio(){
-            document.getElementById("nome").focus();
-       }
-    </script>
-</head>
-<body onload="inicio()">   
-
-    
+    <nav class="navbar navbar-expand-md navbar-light  bg-inverse"> 
+        <div class="container-fluid"> 
+            <a class="navbar-brand" href="index.html">  <img src="imagens/INFOCENA.png"/> <!--InfoCena-->  </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"> 
+                <span class="navbar-toggler-icon"></span> 
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse"> <!-- caso o botão não for clicado, o menu irá ficar escondido -->
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">    <!-- retira os marcadores -->
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="quem _somos.html">Quem somos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="aluguel.html">Alugue sua Loja</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lojas.html">Lojas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastre-se</a></li>       
+                    <li class="nav-item"><a class="nav-link" href="promocao.html">Promoções</a></li>
+                    <!--
+                        <a href="quem _somos.html"> Quem Somos </a>  
+                        <a href="aluguel.html"> Alugue sua Loja </a>
+                        <a href="lojas.html"> Lojas </a>
+                        <a href="produtos.html"> Produtos </a>
+                        <a href="cadastro.html"> Cadastre-se </a>    
+                        <a href="promocao.html"> Promoções</a>
+                    -->
+                </ul> 
+            </div>
+        </div>
+    </nav>
+    <main class="container">   
+        <h1>Aluguel sua loja</h1>
         <form method="post" action="processa.php">
-        <div>
-            <input type="text" id="nome" name="nome"  placeholder="Nome"/>
-        </div>
-        <div>
-            <input type="number" id="idade" name="idade" placeholder="idade"/>
-        </div>
-        <div>        
-            <input type="email" id="email" name="email" placeholder="E-mail"/>
-        </div>
-        <div>
-            <label>Sexo</label>
-            <input type="radio" id="sexo" name="sexo" value="M" />Masculino
-            <input type="radio" id="sexo" name="sexo" value="F" />Feminino
-        </div>
-        <div>
-            <label>Estilo de loja</label>
-            <input type="checkbox" id="estilo" name="estilo[]" value="L"/>Loja
-            <input type="checkbox" id="estilo" name="estilo[]" value="Q"/>Quiosque
-            <input type="checkbox" id="estilo" name="estilo[]" value="S"/>Stand
-        </div>
-        <div>
+            <div class="row mb-3">
+                <div class="col-md">   
+                <input type="text" id="nome" name="nome" placeholder="Nome" class="form-control" /> 
+                </div>
+            </div>
+            <div class="row mb-3 ">
+                <div class="col-md">
+                    <input type="number" id="idade" name="idade" placeholder="Idade" class="form-control" />
+                </div>                       
+                <div class="col-md">
+                    <input type="email" id="email" name="email" placeholder="E-mail" class="form-control"/> 
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md">
+                    <label class="form-label">Sexo: </label>
+                    <input type="radio" id="sexo" name="sexo" value="M" class="form-check-input"/> 
+                    <label class="form-check-label"  for="sexo">Masculino</label>
+                   
+                    <input type="radio" id="sexo1" name="sexo" value="F" class="form-check-input"/>
+                    <label class="form-check-label"  for="sexo1">Feminino</label>
+                </div>            
+                <div class ="col-md">                 
+                    <label>Estilo de loja: </label>
 
-            <labelfor="cidade">Cidade</label>
-            <select id="cidade" name="cidade">
-                <option value="RJ"> Rio de Janeiro</option>
-                <option value="NI"> Nova Iguaçu</option>
-                <option value="NF"> Nova Friburgo</option>
-                <option value="SJM"> São João de Meriti</option>
-                <option value="DC"> Duque de Caxias</option>
-            </select>
-        </div>
-        <div>
-            <input type="datetime-local" name="diahora"  />
-        </div>
-        <div>
-        <input type="number" id="telefoneFixo" name="telefoneFixo" placeholder="Tefefone Fixo"/>
-        </div>
-        <div>
-        <input type="number" id="telefoneCelular" name="telefoneCelular" placeholder="Tefefone Celular"/>
-        </div>
-        <div>
-        <textarea id="mensagem" cols="20" rows="10" name="mensagem" placeholder="Mensagem"></textarea>
-        </div>
-        <div>
-        <input type="submit" value="Ok"/>
-        <input type="reset" value="Limpar"/>
-        </div>
-     </div>
+                    <input type="checkbox" id="estilo" name="estilo[]" value="L" class="form-check-input" />
+                    <label class="form-check-label"  for="estilo">
+                        Loja 
+                    </label>
 
-           
-    </form>
-    <table id="dados" border="1">
-        <tr>
-            <td>Nome</td>
-            <td>Email</td>
-            <td>Telefone Fixo</td>
-            <td>Telefone Celular</td>
-            <td>Mensagem</td>
-        </tr>
-    </table>   
+                    <input type="checkbox" id="estiloq" name="estilo[]" value="Q" class="form-check-input" />
+                    <label class="form-check-label"  for="estiloq">
+                        Quiosque 
+                    </label>
+
+                    <input type="checkbox" id="estilos" name="estilo[]" value="S" class="form-check-input" />
+                    <label class="form-check-label"  for="estilos">
+                        Stand 
+                    </label>
+
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md form-group">
+                    <label for="cidade" class="form-label">Cidade</label>
+                    <select id="cidade" name="cidade" class="form-select" >
+                        <option>Selecione a cidade</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="NI">Nova Iguaçu</option>
+                        <option value="SJM">São João de Meriti</option>
+                        <option value="DC">Duque de Caxias</option>
+                    </select>
+                </div>
+
+                <div class="col-md">
+                <input type="datetime-local" name="diahora" />
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md">
+                    <input type="text" id="fixo" name="fixo" placeholder="Telefone fixo" class="form-control"/> 
+                </div>
+                <div class="col-md">
+                    <input type="text" id="celular" placeholder="Telefone Celular" class="form-control"/> 
+                </div>
+            </div>
+            <div>
+                <textarea id="mensagem" cols="20" rows="10" name="mensagem" placeholder="Mensagem" class="form-control"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Ok" class="btn btn-primary" />
+                <input type="reset" value="Limpar" class="btn btn-secondary" />
+            </div>   
+        </form>
+    </main>
 </body>
+<script src="js/bootstrap.bundle.min.js"> </script>
 </html>
